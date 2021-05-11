@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `The Heroes Blog Spot`,
@@ -5,6 +7,13 @@ module.exports = {
     author: `@Lykos45`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: "fk0xm7y6ct78",
+        accessToken: "0uwxFYVG74R2YgtyuC8vw_8FEcRnzwFbkZgPY-wnwx8",
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
